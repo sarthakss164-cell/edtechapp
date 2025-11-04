@@ -3,12 +3,6 @@ from datetime import datetime
 from streamlit_autorefresh import st_autorefresh
 st.set_page_config(page_title="EdTech Simulation", page_icon="🎓", layout="centered")
 
-# Auto-refresh every 1000 ms (1 second)
-st_autorefresh(interval=1000, key="clock")
-
-# Real-time clock in sidebar
-current_time = datetime.now().strftime("%H:%M:%S")
-st.sidebar.markdown(f"### 🕒 Current Time: {current_time}")
 
 
 
@@ -154,3 +148,4 @@ if name:
         st.warning("Thanks for using the EdTech Simulation! 👋")
 else:
     st.info("👆 Please enter your name to start.")
+
