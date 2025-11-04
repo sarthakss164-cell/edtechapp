@@ -5,13 +5,6 @@ from streamlit_autorefresh import st_autorefresh
 # --- Page Config ---
 st.set_page_config(page_title="EdTech Simulation", page_icon="🎓", layout="centered")
 
-# --- Auto-refresh for real-time clock ---
-st_autorefresh(interval=1000, key="clock")
-current_time = datetime.now().strftime("%H:%M:%S")
-st.sidebar.markdown(
-    f"<h3 style='text-align:center; color:limegreen;'>🕒 {current_time}</h3>",
-    unsafe_allow_html=True
-)
 
 # --- Initialize session state ---
 if "coins" not in st.session_state:
@@ -189,3 +182,4 @@ if name:
 
 else:
     st.info("👆 Please enter your name to start.")
+
